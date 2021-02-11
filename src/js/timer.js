@@ -40,7 +40,10 @@ class CountdownTimer {
     );
     const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
+    this.addTimeContent(days, hours, mins, secs);
+  }
 
+  addTimeContent(days, hours, mins, secs) {
     this.refs.days.textContent = `${days}`;
     this.refs.hours.textContent = `${hours}`;
     this.refs.mins.textContent = `${mins}`;
