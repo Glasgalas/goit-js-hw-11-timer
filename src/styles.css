@@ -16,6 +16,13 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
+.flex-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -24,10 +31,16 @@ h1 {
 .timer {
   color: aqua;
   display: flex;
-  flex-flow: row;
   justify-content: space-between;
   padding-right: 30px;
   padding-left: 30px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .timer {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 .field {
